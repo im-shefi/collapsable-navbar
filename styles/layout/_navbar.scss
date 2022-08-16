@@ -8,46 +8,76 @@ nav{
     .container{
         width: min(1200px, 95vw);
         margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
         padding: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+
+        @include breakpoint(desktop){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     .logo img{
-        height: 3.5rem;
+        height: 3.2rem;
         width: auto;
+    }
+
+    .nav-toggle{
+        cursor: pointer;
+        background: none;
+        display: block;
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: flex-end;
+
+        @include breakpoint(desktop){
+            display: none;
+        }
     }
 
     .nav-list{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+
+        @include breakpoint(desktop){
+            flex-direction: row;
+        }
     }
 
-    .nav-item *{
+    .nav-link{
+        display: flex;
+        position: relative;
+        padding: 0.5rem 2rem;
         transition: 200ms;
         -webkit-transition: 200ms;
         -moz-transition: 200ms;
         -ms-transition: 200ms;
         -o-transition: 200ms;
-    }
-
-    .nav-item a{
-        display: flex;
-        position: relative;
-        padding: 0.8rem;
 
         &:hover{
             color: $purple;
+            background: $light-purple;
+        }
+
+        @include breakpoint(desktop){
+            padding: 0.5rem;
         }
     }
 
-    .nav-item img{
+    .icon{
         width: 2rem;
         height: 2rem;
+        transition: 200ms;
+        -webkit-transition: 200ms;
+        -moz-transition: 200ms;
+        -ms-transition: 200ms;
+        -o-transition: 200ms;
 
         &:hover{
             filter: brightness(1.5);

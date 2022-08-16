@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Collapsable navbar template with SASS and JS">
 
-    <title>Collapsable Navbar</title>
+    <title>Collapsible Navbar</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.webp">
 
     <link rel="stylesheet" href="styles/style.css">
@@ -25,10 +25,10 @@
             <!-- PAGE NAVIGATION -->
             <div>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="">Home</a></li>
-                    <li class="nav-item"><a href="">About</a></li>
-                    <li class="nav-item"><a href="">Projects</a></li>
-                    <li class="nav-item"><a href="">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
                 </ul>
             </div>
 
@@ -37,21 +37,26 @@
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="">
-                            <img src="img/facebook.webp" alt="Facebook">
+                            <img class="icon" src="img/facebook.webp" alt="Facebook">
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="">
-                            <img src="img/instagram.webp" alt="Instagram">
+                            <img class="icon" src="img/instagram.webp" alt="Instagram">
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="">
-                            <img src="img/twitter.webp" alt="Twitter">
+                            <img class="icon" src="img/twitter.webp" alt="Twitter">
                         </a>
                     </li>
                 </ul>
             </div>
+
+            <!-- NAV TOGGLE -->
+            <button class="nav-toggle">
+                <img class="icon" src="img/favicon.webp" alt="Nav-toggle">
+            </button>
 
         </div>
 

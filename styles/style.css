@@ -42,6 +42,9 @@ a {
 }
 
 body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
   background: #efecf5;
 }
 
@@ -55,42 +58,76 @@ nav {
 nav .container {
   width: min(1200px, 95vw);
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  nav .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 nav .logo img {
-  height: 3.5rem;
+  height: 3.2rem;
   width: auto;
+}
+nav .nav-toggle {
+  cursor: pointer;
+  background: none;
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: flex-end;
+}
+@media screen and (min-width: 768px) {
+  nav .nav-toggle {
+    display: none;
+  }
 }
 nav .nav-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
-nav .nav-item * {
+@media screen and (min-width: 768px) {
+  nav .nav-list {
+    flex-direction: row;
+  }
+}
+nav .nav-link {
+  display: flex;
+  position: relative;
+  padding: 0.5rem 2rem;
   transition: 200ms;
   -webkit-transition: 200ms;
   -moz-transition: 200ms;
   -ms-transition: 200ms;
   -o-transition: 200ms;
 }
-nav .nav-item a {
-  display: flex;
-  position: relative;
-  padding: 0.8rem;
-}
-nav .nav-item a:hover {
+nav .nav-link:hover {
   color: #5E4992;
+  background: #efecf5;
 }
-nav .nav-item img {
+@media screen and (min-width: 768px) {
+  nav .nav-link {
+    padding: 0.5rem;
+  }
+}
+nav .icon {
   width: 2rem;
   height: 2rem;
+  transition: 200ms;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
 }
-nav .nav-item img:hover {
+nav .icon:hover {
   filter: brightness(1.5);
   -webkit-filter: brightness(1.5);
 }/*# sourceMappingURL=style.css.map */
